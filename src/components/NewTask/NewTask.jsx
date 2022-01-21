@@ -11,12 +11,11 @@ function NewTask() {
     date: "",
     description: "",
     completed: false,
-    tags: ["Test Tag"],
+    tags: ["Education"],
   });
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const onChange = (event) => {
     const { name, value } = event.target;
     setTask((prevState) => ({ ...prevState, [name]: value }));
@@ -29,46 +28,44 @@ function NewTask() {
   };
 
   return (
-    <div className="container">
-      <h1 className="font-weight-normal mb-5">Add a new task!</h1>
+    <div className="vertical-center">
+      <h1>Add a new task!</h1>
       <form
         onSubmit={onSubmit}
         onKeyPress={(e) => {
           e.key === "Enter" && e.preventDefault();
         }}
       >
-        <div>
-          <label>Task name</label>
-          <input
-            required
-            type="text"
-            name="name"
-            className="form-control"
-            onChange={onChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Description</label>
-          <textarea
-            name="description"
-            className="form-control"
-            required
-            rows="5"
-            onChange={onChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Due Date</label>
-          <input
-            type="date"
-            name="date"
-            onChange={onChange}
-            required
-            className="form-control"
-          />
-        </div>
+        <label>Task name</label>
+        <input
+          required
+          type="text"
+          name="name"
+          className="form-control"
+          onChange={onChange}
+        />
+
+        <label>Description</label>
+        <textarea
+          name="description"
+          className="form-control"
+          required
+          rows="5"
+          onChange={onChange}
+        />
+
+        <label>Due Date</label>
+        <input
+          type="date"
+          name="date"
+          onChange={onChange}
+          required
+          className="form-control"
+        />
+
         <label>Tags:</label>
         <AddTags setTask={setTask} task={task} />
+
         <button type="submit" className="btn btn-primary">
           Submit
         </button>

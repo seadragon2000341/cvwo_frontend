@@ -18,12 +18,21 @@ a:focus,
 a:hover {
   color: #fff;
 }
-div {
-  margin-top: 10px;
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 45rem;
 }
 /* Custom default button */
 
-
+.taskbuttons{
+  margin-top: 1px;
+  margin-right: 2px;
+  position:absolute;
+  top:0;
+  right:0;
+}
 
 /*
  * Base structure

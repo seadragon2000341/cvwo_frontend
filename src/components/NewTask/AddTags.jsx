@@ -8,7 +8,10 @@ export function AddTags({ setTask, task }) {
     }
   };
   const deleteTag = (taskIndex) => {
-    setTask({ ...task, tags: [...task.tags.filter((_, index) => index !== taskIndex)] });
+    setTask({
+      ...task,
+      tags: [...task.tags.filter((_, index) => index !== taskIndex)],
+    });
   };
 
   return (

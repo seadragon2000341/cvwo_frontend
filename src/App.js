@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import Tasks from "./components/Tasks";
-import NewTask from "./components/NewTask/NewTask";
-import EditTask from "./components/EditTask/EditTask";
+import Home from "./Components/Home";
+import Tasks from "./Components/Tasks";
+import NewTask from "./Components/NewTask/NewTask";
+import EditTask from "./Components/EditTask/EditTask";
 
 function App() {
   return (

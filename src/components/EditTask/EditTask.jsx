@@ -39,56 +39,52 @@ function EditTask() {
   };
 
   return (
-    <div>
+    <div className="vertical-center">
       <h1>Edit your task</h1>
       <form
         onKeyPress={(e) => {
           e.key === "Enter" && e.preventDefault();
         }}
       >
-        <div className="form-group">
-          <label>Task name</label>
+        <label>Task name</label>
+        <input
+          value={task.name}
+          name="name"
+          className="form-control"
+          required
+          onChange={onChange}
+        />
+
+        <label>Description</label>
+        <textarea
+          name="description"
+          className="form-control"
+          required
+          rows="5"
+          onChange={onChange}
+          value={task.description}
+        />
+
+        <label>Due Date</label>
+        <input
+          type="date"
+          name="date"
+          value={task.date}
+          onChange={onChange}
+          required
+          className="form-control"
+        />
+
+        <label>
+          Completed:
           <input
-            value={task.name}
-            name="name"
-            className="form-control"
-            required
+            name="completed"
+            type="checkbox"
+            checked={task.completed}
             onChange={onChange}
           />
-        </div>
-        <div className="form-group">
-          <label>Description</label>
-          <textarea
-            name="description"
-            className="form-control"
-            required
-            rows="5"
-            onChange={onChange}
-            value={task.description}
-          />
-        </div>
-        <div className="form-group">
-          <label>Due Date</label>
-          <input
-            type="date"
-            name="date"
-            value={task.date}
-            onChange={onChange}
-            required
-            className="form-control"
-          />
-        </div>
-        <div>
-          <label>
-            Completed:
-            <input
-              name="completed"
-              type="checkbox"
-              checked={task.completed}
-              onChange={onChange}
-            />
-          </label>
-        </div>
+        </label>
+
         <div>
           <label>Tags:</label>
           <AddTags setTask={setTask} task={task} />

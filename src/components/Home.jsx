@@ -1,8 +1,7 @@
-import React from "react"
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default () => (
- 
   <div className="text-center vertical-center">
     <div>
       <h1 className="cover-heading">Task Manager</h1>

@@ -28,6 +28,6 @@ function Task({ tasks }) {
     </div>
   ));
 
-  return <>{taskList.length === 0 ? <>No task here</> : <>{taskList}</>}</>;
+  return taskList;
 }
 export default Task;

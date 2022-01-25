@@ -1,6 +1,4 @@
 function tasksReducer(state = [], action) {
-  const sortAsc = (key) => (a, b) => a[key] > b[key] ? -1 : 1;
-  const sortDsc = (key) => (a, b) => a[key] > b[key] ? 1 : -1;
 
   switch (action.type) {
     case "VIEW_TASKS":
@@ -13,16 +11,7 @@ function tasksReducer(state = [], action) {
     case "DELETE_TASK":
       const remainingTasks = state.filter((task) => task.id !== action.id);
       return remainingTasks;
-    case "ALPHABET_ASC":
-      return state.slice().sort(sortDsc("name"));
-
-    case "ALPHABET_DESC":
-      return state.slice().sort(sortAsc("name"));
-    case "DATE_ASC":
-      return state.slice().sort(sortDsc("date"));
-    case "DATE_DESC":
-      return state.slice().sort(sortAsc("date"));
-
+    
     default:
       return state;
   }

@@ -1,6 +1,6 @@
+import React from "react";
 import { deleteTask } from "../../Actions/tasksAction";
 import { useDispatch } from "react-redux";
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function ({ taskID }) {

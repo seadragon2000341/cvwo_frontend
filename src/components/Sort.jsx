@@ -1,13 +1,7 @@
 import React from "react";
-import { filterAction } from "../Actions/filterAction";
-import { useDispatch } from "react-redux";
 
-export default () => {
-  const dispatch = useDispatch();
-  const onChange = (event) => {
-    dispatch(filterAction(event.target.value));
-  };
-
+export function Sort( {setSortCriteria} ) {
+  const onChange = (event) => setSortCriteria(event.target.value);
   return (
 
       <select onChange={(e) => onChange(e)}>

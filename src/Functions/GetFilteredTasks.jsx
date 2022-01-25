@@ -13,9 +13,9 @@ export function GetFilteredTasks(statusFilter, tagFilter, sortCriteria) {
     .sort((a, b) => {
       switch (sortCriteria) {
         case "name_asc":
-          return a.name > b.name ? -1 : 1;
-        case "name_desc":
           return a.name < b.name ? -1 : 1;
+        case "name_desc":
+          return a.name > b.name ? -1 : 1;
         case "date_asc":
           return a.date < b.date ? -1 : 1;
         case "date_desc":

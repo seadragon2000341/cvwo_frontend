@@ -3,7 +3,7 @@ import React from "react";
 export function SearchTags({ tagFilter, setTagFilter}) {
   const addTags = (event) => {
     if (event.target.value !== "") {
-      setTagFilter([...tagFilter, event.target.value] );
+      setTagFilter([...tagFilter, event.target.value]);
       event.target.value = "";
     }
   };

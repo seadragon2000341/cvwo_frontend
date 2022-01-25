@@ -1,4 +1,3 @@
-
 .vertical-center {
   margin: 0;
   position: absolute;
@@ -11,14 +10,6 @@
   margin: 0;
   position: absolute;
   left:33%
-
-
-}
-
-a,
-a:focus,
-a:hover {
-  color: #fff;
 }
 
 .card {
@@ -27,7 +18,6 @@ a:hover {
   width: 45rem;
   right:18%
 }
-/* Custom default button */
 
 .taskbuttons{
   margin-top: 1px;
@@ -37,31 +27,13 @@ a:hover {
   right:0;
 }
 
-/*
- * Base structure
- */
 
- html,body {
+html,body {
   height:100%;
 }
 body {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  
-  -ms-flex-pack: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  color: rgb(17, 11, 11);
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  background-color: rgb(237, 238, 222);
 }
-
-
-
-/*
- * Header
- */
-
 
 .tags-form {
   display: flex;
@@ -72,22 +44,32 @@ body {
   padding: 0 8px;
   border: 1px solid rgb(214, 216, 218);
   border-radius: 6px;
-  /* &:focus-within  */
+}
+.select{
+  background-color: transparent;
+  border: 1px solid rgb(214, 216, 218);
+  border-radius: 10px;
 }
 
+.sort{
+    margin-top:10px;
+    margin-bottom:10px;
+}
 .tags-form:focus-within{
   border: 1px solid #0052cc;
 }
 
+.newtask{
+  border-radius:10px;
+}
 .tags-form input  {
     flex: 1;
     border: none;
     height: 46px;
     font-size: 14px;
     padding: 4px 0 0 0;
-    
-  
 }
+
 .tag {
   width: auto;
   height: 32px;

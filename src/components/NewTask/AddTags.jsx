@@ -29,7 +29,7 @@ export function AddTags({ setTask, task }) {
       </ul>
       <input
         type="text"
-        placeholder="Press enter to add tags! Tags are case sensitive"
+        placeholder="Press enter to add tags!"
         onKeyUp={(event) => (event.key === "Enter" ? addTags(event) : null)}
       />
     </div>

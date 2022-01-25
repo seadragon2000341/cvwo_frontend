@@ -23,7 +23,7 @@ export default function Tasks() {
         Filter status by:
         <FilterButtons setStatusFilter={setStatusFilter} />
         <Link to="/newtask" className="btn custom-button">
-          Create New Task
+          <button className="newtask">Create New Task</button>
         </Link>
       </div>
 
@@ -31,7 +31,7 @@ export default function Tasks() {
         Filter tags:{" "}
         <SearchTags tagFilter={tagFilter} setTagFilter={setTagFilter} />
       </div>
-      <div>
+      <div className="sort">
         Sort by: <Sort setSortCriteria={setSortCriteria} />
       </div>
 

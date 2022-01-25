@@ -1,9 +1,9 @@
 export function viewTasks() {
   return (dispatch) => {
     return fetch("http://54.169.72.226/api/tasks/index")
-      .then((response) => response.json())
+      .then((resp) => resp.json())
       .then((tasks) => {
-        dispatch({ type: "VIEW_TASKS", tasks: tasks }); // dispatch data to reducer
+        dispatch({ type: "VIEW_TASKS", tasks: tasks }); 
       });
   };
 }
@@ -28,7 +28,9 @@ export function updateTask(task) {
   return (dispatch) => {
     return fetch(`http://54.169.72.226/api/update/${task.id}`, {
       method: "PATCH",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify(task),
     })
       .then((resp) => resp.json())
@@ -38,9 +40,6 @@ export function updateTask(task) {
   };
 }
 
-export function toggleTodo(index) {
-  return { type: "TOGGLE_TODO", index: index };
-}
 export function deleteTask(id) {
   return (dispatch) => {
     return fetch(`http://54.169.72.226/api/destroy/${id}`, {

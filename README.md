@@ -1,3 +1,7 @@
+Name: Lim Hai Leong Shawn
+Matriculation number: A0237976J
+
+Link to backend: https://github.com/seadragon2000341/cvwo_backend
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

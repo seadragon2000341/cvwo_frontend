@@ -1,9 +1,7 @@
 Name: Lim Hai Leong Shawn
 Matriculation number: A0237976J
 
-Link to working product: http://cvwo2122.s3-website-ap-southeast-1.amazonaws.com/
-
-Link to backend: https://github.com/seadragon2000341/cvwo_backend
+![image](https://github.com/seadragon2000341/cvwo_frontend/assets/78403168/ee1d7bbd-0479-41a9-aa19-161293ed242e)
 
 Writeup: https://github.com/seadragon2000341/cvwo_frontend/blob/master/LimHaiLeongShawn_A0237976J_FinalWriteup.pdf
 # Getting Started with Create React App
